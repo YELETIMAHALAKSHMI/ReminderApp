@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".RegisterActivity">
+    tools:context=".LoginActivity">
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="224dp"
@@ -16,10 +17,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintHorizontal_bias="0.754"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.137" />
+        app:layout_constraintVertical_bias="0.042" />
 
     <EditText
         android:id="@+id/inputPassword"
@@ -64,6 +65,28 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.255" />
 
+
+    <EditText
+        android:id="@+id/inputUsername"
+        android:layout_width="391dp"
+        android:layout_height="70dp"
+        android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/ic_person"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.136" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -89,6 +112,7 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:text="Login"
+        android:onClick="login"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -98,6 +122,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -138,10 +163,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintHorizontal_bias="0.172"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.749" />
+        app:layout_constraintVertical_bias="0.71" />
 
     <Button
         android:id="@+id/facebookbutton"
@@ -155,9 +180,52 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.822"
+        app:layout_constraintHorizontal_bias="0.853"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.749" />
+        app:layout_constraintVertical_bias="0.71" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAdmin"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="560dp"
+        android:layout_marginEnd="50dp"
+        android:layout_weight="2"
+        android:background="@color/white"
+        android:drawableTop="@drawable/baseline_admin_panel_settings_24"
+        android:text="ADMIN"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnUser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnUser"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="564dp"
+        android:layout_marginEnd="92dp"
+        android:layout_weight="2"
+        android:background="@color/white"
+        android:drawableTop="@drawable/baseline_supervised_user_circle_24"
+        android:text="USER"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAdmin"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
